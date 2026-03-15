@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Subway Surfers - Ultra HD & Sound</title>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Canvas for Three.js Game Engine -->
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- UI Overlay -->
+        <div id="ui-layer">
+            <div id="start-screen" class="screen active">
+                <h1 class="logo">SUBWAY<br><span class="highlight">SURFERS HD</span></h1>
+                <p class="subtitle">ULTRA GRAPHICS + SOUND FX 🔊</p>
+                <div class="controls-hint">
+                    <p>⌨️ PC: Arrows / W A S D</p>
+                    <p>📱 Mobile: Swipe Screen</p>
+                    <p><i>(Dodge trains, jump low boxes, duck under high bars)</i></p>
+                </div>
+                <button id="start-btn">TAP TO PLAY & ENABLE SOUND</button>
+            </div>
+            
+            <div id="game-over-screen" class="screen">
+                <h1 class="logo error">KELIYA_NEDA!</h1>
+                <div class="stats-box">
+                    <p>SCORE: <span id="final-score" class="score-highlight">0</span></p>
+                    <p>COINS: <span id="final-coins" class="coin-highlight">0</span></p>
+                </div>
+                <button id="restart-btn">RUN AGAIN</button>
+            </div>
+            
+            <div id="hud">
+                <div class="hud-item score-box">SCORE <br><span id="score">0</span></div>
+                <div class="hud-item coin-box">💰 <br><span id="coins">0</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Load Three.js 3D Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
